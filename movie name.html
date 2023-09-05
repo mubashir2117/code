@@ -44,33 +44,89 @@
         
     }
 
-    sup {
-        color: yellow;
-        font-family: Verdana, Tahoma, sans-serif;
-        font-size: 13px;
+    .trr {
+        color: rgb(255, 0, 30);
+        font-family:'Times New Roman', Times, serif;
+        font-size: 29px;
+        font-weight: bold;
     } 
     #icon{
-        color: red;
+        color: darkgreen;
         background-color: transparent;
     }
+   
+
+.searchBox {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform:  translate(-50%,50%);
+    background: #ffffff;
+    height: 60px;
+    border-radius: 30px;
+    padding: 10px;
+    z-index: 1;
+
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 350px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.9s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+
+    
 </style>
 
 <body>
     <nav class="navbar navbar-light ">
         <div class="container-fluid">
-            <a class="navbar-brand"><strong>NetFlix</strong><sup class="text-success">Mini</sup></a>
-            <form class="d-flex input-group w-auto ">
-                <input type="search" id="input" class="form-control rounded-end " placeholder="Search" aria-label="Search"
-                    aria-describedby="search-addon" />
-                <span class="input-group-text border-0 rounded-start" id="search-addon">
-                    <i class="fas fa-search" id="searchs"></i>
-                </span>
-            </form>
+            <a class="navbar-brand"><strong>Net</strong><span class="trr">Flix</span></a>
+           
+            <div class="searchBox">
+                <input class="searchInput"type="text" id="input" placeholder="Search">
+                <button class="searchButton"  href="#">
+                    <i class="fas fa-search" id="search"></i>
+                </button>
+            </div>
+    
             <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
-        </div>
-    </nav>
-
-    <div class="carousel-inner">
+        </div>  
+        
+        <div class="carousel-inner">
         <!-- Single item -->
         <div class="carousel-item active">
           <img src="net1.jpg" class="d-block w-100" style="height: 450px;" alt="Sunset over the city" />
@@ -78,6 +134,9 @@
         </div>
     
       </div>
+    </nav>
+
+  
 
 
       <div class="container" style="padding-top:20px; border: none;">
@@ -86,30 +145,33 @@
         </div>
     </div>
 
+    <hr style="height: 5px; color: red;">
+    <hr>
+
     <footer class="text-center text-white">
         <!-- Grid container -->
         <div class="container pt-4">
           <!-- Section: Social media -->
           <section class="mb-4 text-light">
             <!-- Facebook -->
-            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="media.html" role="button"
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
               data-mdb-ripple-color="dark"><i class="fab fa-whatsapp" id="icon"></i></a>
     
             <!-- Twitter -->
-            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="media.html" role="button"
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
               data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" id="icon"></i></a>
     
             <!-- Google -->
-            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="media.html" role="button"
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
               data-mdb-ripple-color="dark"><i class="fab fa-google" id="icon"></i></a>
     
             <!-- Instagram -->
-            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="media.html" role="button"
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
               data-mdb-ripple-color="dark"><i class="fab fa-instagram" id="icon"></i></a>
     
             <!-- Linkedin -->
-            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="media.html" role="button"
-              data-mdb-ripple-color="dark"><i class="fab fa-twitter" id="icon"></i></a>
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-github" id="icon"></i></a>
         </div>
         <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.947);">
           © 2023 Copyright:
@@ -119,24 +181,13 @@
     
 
 
-
-
-
-
-
-
-
-
-
-
-
     <script>
-        $("#input").on('keydown', function (m) {
-            if (m.keyCode == 13) {
-                $("#searchs").click();
+        $("#input").on('keydown', function (e) {
+            if (e.keyCode == 13) {
+                $("#search").click();
             }
         })
-            $("#searchs").click(function () {
+            $("#search").click(function () {
                 $("#row").html('');
                 input = $("#input").val();
                 const url = `http://www.omdbapi.com/?s=${input}&apikey=704c6ce7`;
