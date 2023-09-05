@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.rtl.min.css"
+        integrity="sha512-wO8UDakauoJxzvyadv1Fm/9x/9nsaNyoTmtsv7vt3/xGsug25X7fCUWEyBh1kop5fLjlcrK3GMVg8V+unYmrVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="mt-5 d-flex mb-5 ">
+        <input type="text" class="form-control w-25 border-none" placeholder="Movie Name" id="SearchValue">
+        <button class="btn btn-dark mx-2" id="BtnSearch">Search</button>
+    </div>
+    <div class="container ">
+        <div class="row" id="row">
+
+        </div>
+    </div>
+
+    <script>
+        $("#BtnSearch").click(function(){
+            SearchValue = $("#SearchValue").val();
+        const url = `http://www.omdbapi.com/?s=${SearchValue}&apikey=704c6ce7`
+        $.ajax({
+            url: url,
+            type: "GET",
+            dataType: "JSON",
+            success: function (accept) {
+                console.log(accept)
+            //     $("#row").html(`
+            //  <div class="card" style="width: 18rem;">
+            // <img class="card-img-top" src="${accept.Poster}" alt="Card image cap">
+            // <div class="card-body">
+            //     <h5 class="card-title">${accept.Title}</h5>
+            //     <p class="card-text">${accept.Plot}</p>
+            //     <a href="#" class="btn btn-primary">Go somewhere</a>
+            // </div>
+            // </div>
+            // `)
+            },
+            error: function (accept) {
+                console.log(accept)
+            }
+
+        })
+    })
+    </script>
+</body>
+
+</html>
