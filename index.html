@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.rtl.min.css"
+        integrity="sha512-wO8UDakauoJxzvyadv1Fm/9x/9nsaNyoTmtsv7vt3/xGsug25X7fCUWEyBh1kop5fLjlcrK3GMVg8V+unYmrVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+</head>
+<style>
+    body {
+        margin: 0%;
+        padding: 0%;
+        font-family: "Arial", Helvetica, sans-serif;
+    }
+
+     #toggleDark {
+        font-size: 30px;
+        cursor: pointer;
+        transform: translate(-20%, -50%);    
+        float: right;        
+        z-index: 1;
+        color: white;
+        left: 92%;
+        top: 8%;
+        position: absolute;
+    } 
+
+    
+
+    #icon {
+        color: darkgreen;
+        background-color: transparent;
+    }
+
+
+    .searchBox {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background: #ffffff;
+        height: 60px;
+        border-radius: 30px;
+        padding: 10px;
+        z-index: 1;
+
+
+
+    }
+
+    .searchBox:hover>.searchInput {
+        width: 350px;
+        padding: 0 6px;
+    }
+
+    .searchBox:hover>.searchButton {
+        background: white;
+        color: #2f3640;
+    }
+
+    .searchButton {
+        color: white;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #2f3640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.8s;
+    }
+
+    .searchInput {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: black;
+        font-size: 16px;
+        transition: 0.9s;
+        line-height: 40px;
+        width: 0px;
+
+    }
+
+    .modal-center {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+
+    .navbar-brand strong {
+        z-index: 1;
+        position: absolute;
+        top: 5%;
+        left: 4%;
+        right: 80%;
+        bottom: 0%;
+        color: red;
+        font-size: 32px;
+        background-color: transparent;
+        letter-spacing: 2px;
+        font-family: Verdana, Tahoma, sans-serif;
+        font-weight: bolder;
+        
+    }
+    .d-block:hover{
+       transform: scale(0.99);
+    }
+
+  
+    </style>
+
+<body>
+    <nav class="navbar navbar-light ">
+        <div class="container-fluid">
+            <marquee behavior="" direction="">NetFlix</marquee>
+            <h1 class="navbar-brand"><strong>NetFlix</strong></h1>
+
+            <div class="searchBox">
+                <input class="searchInput" type="text" id="input" placeholder="Search" required />
+                <button class="searchButton" href="#">
+                    <i class="fas fa-search" id="search"></i>
+                </button>
+            </div>
+            <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+
+        </div>
+        
+
+        <div class="carousel-item active">
+            <img src="net1.jpg" class="d-block" style="width:100%; height: 400px;
+             background-color: linear-gradient(to left,rgba(229, 10, 10, 0.511),rgb(230, 218, 218)); opacity: 1;" alt="Sunset over the city" />
+
+        </div>
+
+
+    </nav>
+
+    <div class="container" style="padding-top:20px; border: none;">
+        <div class="row" id="row">
+        </div>
+    </div>
+
+
+ 
+  <div class="container mt-2">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col-sm-3">
+        <div class="card h-100">
+          <img src="movie1.jpg" style="height: 290px;" class="card-img-top" alt="Skyscrapers" />
+          <div class="card-body">
+            <p class="card-text text-center">
+             Interception </p>
+          
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card h-100">
+          <img src="movie2.jpg" style="height: 290px;" class="card-img-top" alt="Los Angeles Skyscrapers" />
+          <div class="card-body">
+            <p class="card-text text-center">
+                Mission Impossible
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card h-100">
+          <img src="movie3.jpg" style="height: 290px;" class="card-img-top" alt="Palm Springs Road" />
+          <div class="card-body">
+            <p class="card-text text-center">
+                War
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card h-100">
+          <img src="movie4.jpg" height="290px" class="card-img-top" alt="Palm Springs Road" />
+          <div class="card-body">
+            <p class="card-text text-center">
+              Fast & Furious
+            </p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   
+  <div class="container mt-2">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col-sm-3">
+        <div class="card h-100">
+          <img src="movie5.jpg" style="height: 290px;" class="card-img-top" alt="Skyscrapers" />
+          <div class="card-body">
+            <p class="card-text text-center">
+             Interception </p>
+          
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card h-100">
+          <img src="movie6.jpg" style="height: 290px;" class="card-img-top" alt="Los Angeles Skyscrapers" />
+          <div class="card-body">
+            <p class="card-text text-center">
+                Mission Impossible
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card h-100">
+          <img src="movie7.jpg" style="height: 290px;" class="card-img-top" alt="Palm Springs Road" />
+          <div class="card-body">
+            <p class="card-text text-center">
+                War
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card h-100">
+          <img src="movie8.jpg" height="290px" class="card-img-top" alt="Palm Springs Road" />
+          <div class="card-body">
+            <p class="card-text text-center">
+              Fast & Furious
+            </p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <hr style="border: 2px solid red;">
+
+    <footer class="text-center text-white">
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4 text-light">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-whatsapp" id="icon"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" id="icon"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-google" id="icon"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-instagram" id="icon"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-github" id="icon"></i></a>
+        </div>
+        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.947);">
+            © 2023 Copyright:
+            <a class="text-white" href="">NetFlix.com</a>
+        </div>
+    </footer>
+
+
+    <script>
+        $("#input").on('keydown', function (e) {
+            if (e.keyCode == 13) {
+                $("#search").click();
+            }
+        })
+        $("#search").click(function () {
+            $("#row").html('');
+            input = $("#input").val();
+            const url = `http://www.omdbapi.com/?s=${input}&apikey=704c6ce7`;
+            $.ajax({
+                url: url,
+                type: "GET",
+                dataType: "JSON",
+                success: function (accept) {
+                    for (i of accept.Search) {
+                        $("#row").append(
+
+                            `<button class="btn btn-primary btm-md mb-2" data-toggle="modal" data-target="#myModal">Watch This</button>
+                    <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-center">
+                    <div class="modal-dialog .modal-align-center">
+                <div class="modal-content bg-black">
+                <div class="modal-header">
+                    <img src="${i.Poster}" class="img-fluid rounded-start" alt="..." style="height:220px; width:100%; ">         
+                    </div>
+                    <div class="modal-body text-uppercase text-white h4">${i.Type}</div>
+                    <div class="modal-body text-uppercase text-white h4">${i.Year}</div>
+                    <div class="modal-body text-uppercase text-white h4">${i.imdbID}</div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-md" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>`
+                        )
+                    }
+                },
+                error: function (accept) {
+                    console.log(accept)
+                }
+            })
+
+
+        })
+
+       
+        const toggle = document.getElementById('toggleDark');
+        const body = document.querySelector('body');
+
+        toggle.addEventListener('click', function () {
+            this.classList.toggle('bi-moon');
+            if (this.classList.toggle('bi-brightness-high-fill')) {
+                body.style.background = 'white';
+                body.style.color = 'red';
+                body.style.transition = '0.5s';
+            } else {
+                body.style.background = 'black';
+                body.style.color = 'white';
+                body.style.transition = '0.5s';
+            }
+        });
+    </script>
+</body>
+
+</html>
