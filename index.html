@@ -28,20 +28,24 @@
         margin: 0%;
         padding: 0%;
         font-family: "Arial", Helvetica, sans-serif;
+
     }
 
      #toggleDark {
-        font-size: 30px;
+        font-size: 25px;
         cursor: pointer;
         transform: translate(-20%, -50%);    
         float: right;        
         z-index: 1;
         color: white;
-        left: 92%;
+        left: 95%;
         top: 8%;
         position: absolute;
     } 
 
+    #toggleDark:hover::before{
+      color: black;
+    }
     
 
     #icon {
@@ -55,34 +59,26 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, 50%);
-        background: #ffffff;
+        background: black;
         height: 60px;
-        border-radius: 30px;
+        border-radius: 20px;
         padding: 10px;
         z-index: 1;
-
-
-
-    }
-
-    .searchBox:hover>.searchInput {
-        width: 350px;
-        padding: 0 6px;
     }
 
     
 
     .searchButton {
-        color: white;
+        color:white;
         float: right;
         width: 40px;
         height: 40px;
-        border-radius: 50%;
-        background: #2f3640;
+        border-radius: 40%;
+        background: red;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: 0.8s;
+        
     }
 
     .searchInput {
@@ -92,10 +88,9 @@
         float: left;
         padding: 0;
         color: black;
-        font-size: 16px;
-        transition: 0.9s;
+        font-size: 16px;        
         line-height: 40px;
-        width: 0px;
+        width: 400px;
 
     }
 
@@ -108,7 +103,7 @@
     .navbar-brand strong {
         z-index: 1;
         position: absolute;
-        top: 5%;
+        top: 4%;
         left: 4%;
         right: 80%;
         bottom: 0%;
@@ -120,46 +115,65 @@
         font-weight: bolder;
         
     }
-   
-    #img{
-      width: 100%;
-      height: 400px;
-      background: url("net1.jpg");
+    .content{
+      z-index: 1;
+      position: absolute;
+        top: 25%;
+        left: 30%;
+        right: 30%;
+        bottom: 0%;
+        color: white;
+        font-size: 28px;
+        letter-spacing: 3px;
+        font-family: Verdana, Tahoma, sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        
+
     }
- #img:hover{
-       transform: scale(0.99);
-    }
-  
+   #btn{
+        cursor: pointer;        
+        float: right;        
+        z-index: 1;
+        left: 87%;
+        top: 5%;
+        position: absolute;
+   }
+
+   .login-dark {
+    background: linear-gradient(145deg, #575b5d, #252b2d);
+}
+body {
+    font-size: 13px;
+}
     </style>
 
 <body>
-    <nav class="navbar navbar-light ">
-        <div class="container-fluid">
+    <nav class="nav">     
+      <img src="net1.jpg" style="height: 450px; width: 100%; opacity: 5;" alt="">
+      <div class="container-fluid">
            
             <h1 class="navbar-brand"><strong>NetFlix</strong></h1>
+            <div class="content">
+             <b> Watch Unlimited Movies Anywhere/Anytime</b>
+              
+            </div>
 
             <div class="searchBox">
                 <input class="searchInput" type="text" id="input" placeholder="Search" required />
                 <button class="searchButton" href="#">
                     <i class="fas fa-search" id="search"></i>
-                </button>
+                  </button>
             </div>
             <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+            <button type="button" class="btn btn-danger" id="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sign In</button>
 
         </div>
-        
+          </nav>
 
-        <div class="carousel-item active">
-            <img src="net1.jpg" class="d-block" id="img" style="
-             background-color: linear-gradient(to left,rgba(229, 10, 10, 0.511),rgb(230, 218, 218));" alt="Sunset over the city" />
-
-        </div>
-
-
-    </nav>
 
     <div class="container" style="padding-top:20px; border: none;">
-        <div class="row" id="row">
+        <div class="row" id="row" >
         </div>
     </div>
 
@@ -171,12 +185,23 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <img class="card-img-top modal-image" src="" alt="Card image cap">
-              <p class="card-text"></p>
+              <img class="card-img-top modal-image" src="" alt="Card image cap" style="height: 250px;">
+              <hr>
+              <h5 class="card-text modal-text-s mt-2" style="font-weight:bold;"></h5>
+              <p class="card-text modal-texts"></p>
+              <hr>           
+              <p class="card-text modal-text_s"></p>
+              <hr>
+              <p class="card-text modal-text"></p>
+              <hr>
+              <p class="card-text modal-text--s"></p>
+              <hr>
+              <p class="card-text modal-text__s"></p>
+              <hr>
+
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -278,6 +303,68 @@
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" >
+        <div class="col-4" id="log" style="width: 100%; height: 100%;">
+          <div class="login-dark p-5 shadow-lg rounded">
+              <div class="pt-3">
+                  <h2 class="text-white ">Sign In | Dark</h2>
+              </div>
+  
+              <form class="mt-5">
+                  <div class="form-group">
+                      <input type="email" 
+                          class="form-control form-control-sm bg-light" 
+                          placeholder="Email Id">
+                  </div>
+  
+                  <div class="form-group">
+                      <input type="password" 
+                          class="form-control form-control-sm bg-light" 
+                          placeholder="Password">
+                  </div>
+  
+                  <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="rememberCheckBox">
+                      <label class="form-check-label text-light" for="rememberCheckBox">Remember me?</label>
+                  </div>
+  
+                  <div class="mt-5">
+                      <button class="btn btn-lg btn-dark col text-center">
+                          Login
+                      </button>
+                  </div>
+  
+                  <div class="text-center mt-2">
+                      <a href="#" class="text-warning">Forgot Password?</a>
+                  </div>
+                  
+                  <div class="mt-5">
+                      <p class="text-white text-center">
+                          Don't have an account?
+                          <a href="#" class="text-warning">Click here to register</a>
+                      </p>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <hr style="border: 2px solid red;">
 
     <footer class="text-center text-white">
@@ -329,16 +416,23 @@
                 success: function (accept) {
                     for (i of accept.Search) {
                         $("#row").append(
-
-                        `<div class="card" style="width: 18rem; margin:auto">
-                     <img class="card-img-top" src="${i.Poster}" alt="Card image cap">
-                     <div class="card-body">
-                         <h5 class="card-title">${i.Title}</h5>
-                         <p class="card-text">${i.Year}</p>
-                         <p class="card-text">${i.Type}</p>
-                         <button data-bs-toggle="modal" id='${i.imdbID}' data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary">view</button>
-                        
-                         </div>`
+                      `<div class="card mb-3" style="max-width: 500px; margin-left:10px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="${i.Poster}" class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title" style="font-weight:bold;">${i.Title}</h5>
+                              <p class="card-text">${i.Type}</p>
+                              <p class="card-text"><small class="text-dark">${i.Year}</small></p>
+                              <button data-bs-toggle="modal" id='${i.imdbID}' data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary btn-md">View More</button>                        
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>`
+                   
                          )
                         }
                     },
@@ -362,6 +456,12 @@
                     $(".modal-image").attr('src',accept.Poster);
                     $(".modal-title").text(accept.Title);
                     $(".modal-text").text(accept.Plot);
+                    $(".modal-texts").text(accept.Awards);
+                    $(".modal-text--s").text(accept.Released); 
+                    $(".modal-text-s").text(accept.Writer);
+                    $(".modal-text_s").text(accept.Actors);
+                    $(".modal-text__s").text(accept.BoxOffice);
+
 
                 },
                 error: function (accept) {
