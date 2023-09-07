@@ -1,11 +1,12 @@
 var username ="admin";
 var password ="Admin123";
-var phone =1324234;
-var uname ="admin";
-var pword = "Admin123"
-if((uname == username || uname == phone) && pword == password){
+
+
+if((username == "admin"|| username == 22117 ) && password == "Admin123" ){
 console.log("log in")
 }
 else{
     console.log("error in")   
 }
+
+console.log((username == "admin"|| username == 22117 ) && password == "Admin123")

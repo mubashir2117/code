@@ -15,9 +15,9 @@
         integrity="sha512-wO8UDakauoJxzvyadv1Fm/9x/9nsaNyoTmtsv7vt3/xGsug25X7fCUWEyBh1kop5fLjlcrK3GMVg8V+unYmrVA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 
@@ -70,10 +70,7 @@
         padding: 0 6px;
     }
 
-    .searchBox:hover>.searchButton {
-        background: white;
-        color: #2f3640;
-    }
+    
 
     .searchButton {
         color: white;
@@ -123,17 +120,22 @@
         font-weight: bolder;
         
     }
-    .d-block:hover{
+   
+    #img{
+      width: 100%;
+      height: 400px;
+      background: url("net1.jpg");
+    }
+ #img:hover{
        transform: scale(0.99);
     }
-
   
     </style>
 
 <body>
     <nav class="navbar navbar-light ">
         <div class="container-fluid">
-            <marquee behavior="" direction="">NetFlix</marquee>
+           
             <h1 class="navbar-brand"><strong>NetFlix</strong></h1>
 
             <div class="searchBox">
@@ -148,8 +150,8 @@
         
 
         <div class="carousel-item active">
-            <img src="net1.jpg" class="d-block" style="width:100%; height: 400px;
-             background-color: linear-gradient(to left,rgba(229, 10, 10, 0.511),rgb(230, 218, 218)); opacity: 1;" alt="Sunset over the city" />
+            <img src="net1.jpg" class="d-block" id="img" style="
+             background-color: linear-gradient(to left,rgba(229, 10, 10, 0.511),rgb(230, 218, 218));" alt="Sunset over the city" />
 
         </div>
 
@@ -161,6 +163,24 @@
         </div>
     </div>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <img class="card-img-top modal-image" src="" alt="Card image cap">
+              <p class="card-text"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
  
   <div class="container mt-2">
@@ -310,33 +330,45 @@
                     for (i of accept.Search) {
                         $("#row").append(
 
-                            `<button class="btn btn-primary btm-md mb-2" data-toggle="modal" data-target="#myModal">Watch This</button>
-                    <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-center">
-                    <div class="modal-dialog .modal-align-center">
-                <div class="modal-content bg-black">
-                <div class="modal-header">
-                    <img src="${i.Poster}" class="img-fluid rounded-start" alt="..." style="height:220px; width:100%; ">         
-                    </div>
-                    <div class="modal-body text-uppercase text-white h4">${i.Type}</div>
-                    <div class="modal-body text-uppercase text-white h4">${i.Year}</div>
-                    <div class="modal-body text-uppercase text-white h4">${i.imdbID}</div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-md" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>`
-                        )
+                        `<div class="card" style="width: 18rem; margin:auto">
+                     <img class="card-img-top" src="${i.Poster}" alt="Card image cap">
+                     <div class="card-body">
+                         <h5 class="card-title">${i.Title}</h5>
+                         <p class="card-text">${i.Year}</p>
+                         <p class="card-text">${i.Type}</p>
+                         <button data-bs-toggle="modal" id='${i.imdbID}' data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary">view</button>
+                        
+                         </div>`
+                         )
+                        }
+                    },
+                    error: function (accept) {
+                        console.log(accept)
                     }
+                })
+                
+                
+        })
+
+
+        function detail(e){
+            console.log(e.id);
+            const url = `http://www.omdbapi.com/?i=${e.id}&apikey=704c6ce7`;
+            $.ajax({
+                url: url,
+                type: "GET",
+                dataType: "JSON",
+                success: function (accept) {
+                    $(".modal-image").attr('src',accept.Poster);
+                    $(".modal-title").text(accept.Title);
+                    $(".modal-text").text(accept.Plot);
+
                 },
                 error: function (accept) {
                     console.log(accept)
                 }
             })
-
-
-        })
+        }
 
        
         const toggle = document.getElementById('toggleDark');
