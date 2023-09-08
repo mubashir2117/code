@@ -184,7 +184,7 @@
 
         function detail(e){
             console.log(e.id);
-            const url = `http://www.omdbapi.com/?i=${e.id}&apikey=704c6ce7`;
+            const url = `http://www.omdbapi.com/?s=${e.id}&apikey=704c6ce7`;
             $.ajax({
                 url: url,
                 type: "GET",

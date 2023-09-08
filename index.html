@@ -2,221 +2,292 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.rtl.min.css"
-        integrity="sha512-wO8UDakauoJxzvyadv1Fm/9x/9nsaNyoTmtsv7vt3/xGsug25X7fCUWEyBh1kop5fLjlcrK3GMVg8V+unYmrVA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="View  More Detailsport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.rtl.min.css"
+    integrity="sha512-wO8UDakauoJxzvyadv1Fm/9x/9nsaNyoTmtsv7vt3/xGsug25X7fCUWEyBh1kop5fLjlcrK3GMVg8V+unYmrVA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<script>
+  AOS.init();
+</script>
 
 </head>
 <style>
-    body {
-        margin: 0%;
-        padding: 0%;
-        font-family: "Arial", Helvetica, sans-serif;
+  body {
+    margin: 0%;
+    padding: 0%;
+    font-family: "Arial", Helvetica, sans-serif;
 
-    }
+  }
 
-     #toggleDark {
-        font-size: 25px;
-        cursor: pointer;
-        transform: translate(-20%, -50%);    
-        float: right;        
-        z-index: 1;
-        color: white;
-        left: 95%;
-        top: 8%;
-        position: absolute;
-    } 
+  #toggleDark {
+    font-size: 25px;
+    cursor: pointer;
+    transform: translate(-20%, -50%);
+    float: right;
+    z-index: 1;
+    color: white;
+    left: 95%;
+    top: 8%;
+    position: absolute;
+  }
 
-    #toggleDark:hover::before{
-      color: black;
-    }
-    
-
-    #icon {
-        color: darkgreen;
-        background-color: transparent;
-    }
+  #toggleDark:hover::before {
+    color: black;
+  }
 
 
-    .searchBox {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        background: black;
-        height: 60px;
-        border-radius: 20px;
-        padding: 10px;
-        z-index: 1;
-    }
+  #icon {
+    color: red;
+    background-color: transparent;
+  }
 
-    
 
-    .searchButton {
-        color:white;
-        float: right;
-        width: 40px;
-        height: 40px;
-        border-radius: 40%;
-        background: red;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
+  .searchBox {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background: black;
+    height: 60px;
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 1;
+  }
 
-    .searchInput {
-        border: none;
-        background: none;
-        outline: none;
-        float: left;
-        padding: 0;
-        color: black;
-        font-size: 16px;        
-        line-height: 40px;
-        width: 400px;
 
-    }
 
-    .modal-center {
-        display: table;
-        height: 100%;
-        width: 100%;
-    }
+  .searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .navbar-brand strong {
-        z-index: 1;
-        position: absolute;
-        top: 4%;
-        left: 4%;
-        right: 80%;
-        bottom: 0%;
-        color: red;
-        font-size: 32px;
-        background-color: transparent;
-        letter-spacing: 2px;
-        font-family: Verdana, Tahoma, sans-serif;
-        font-weight: bolder;
-        
-    }
-    .content{
-      z-index: 1;
-      position: absolute;
-        top: 25%;
-        left: 30%;
-        right: 30%;
-        bottom: 0%;
-        color: white;
-        font-size: 28px;
-        letter-spacing: 3px;
-        font-family: Verdana, Tahoma, sans-serif;
-        font-weight: bolder;
-        text-align: center;
-        
+  }
 
-    }
-   #btn{
-        cursor: pointer;        
-        float: right;        
-        z-index: 1;
-        left: 87%;
-        top: 5%;
-        position: absolute;
-   }
+  .searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 40px;
+    width: 400px;
 
-   .login-dark {
+  }
+
+  .modal-center {
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+
+  .navbar-brand strong {
+    z-index: 1;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    right: 80%;
+    bottom: 0%;
+    color: red;
+    font-size: 32px;
+    background-color: rgba(0, 0, 0, 0.215);
+    height: 40px;
+    width: 150px;
+    padding: auto;
+    letter-spacing: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+
+  }
+
+  .navbar-brand strong:hover {
+    color: white;
+
+  }
+
+  .content {
+    z-index: 1;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    right: 30%;
+    bottom: 0%;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    height: 95px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.196);
+  }
+
+  .content:hover {
+    background-color: black;
+
+  }
+
+  #btn {
+    cursor: pointer;
+    float: right;
+    z-index: 1;
+    left: 87%;
+    top: 5%;
+    position: absolute;
+    border: none;
+  }
+
+  .login-dark {
     background: linear-gradient(145deg, #575b5d, #252b2d);
-}
-body {
+  }
+
+  body {
     font-size: 13px;
+  }
+
+  .bt {
+    background-color: red;
+    color: white;
+  }
+
+  .bt:hover {
+    background-color: white;
+    color: red;
+  }
+
+  .col {
+    width: 90px;
+    padding: 5px;
+    margin-left: 36%;
+  }
+
+  .col:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .button {
+    width: 60px;
+    border: 1px solid black;
+  }
+
+  .button:hover {
+    background-color: black;
+    color: white;
+  }
+.subscribe:hover{background-color: black;
+  color: white;
+
 }
-    </style>
+ 
+  
+</style>
 
 <body>
-    <nav class="nav">     
-      <img src="net1.jpg" style="height: 450px; width: 100%; opacity: 5;" alt="">
-      <div class="container-fluid">
-           
-            <h1 class="navbar-brand"><strong>NetFlix</strong></h1>
-            <div class="content">
-             <b> Watch Unlimited Movies Anywhere/Anytime</b>
-              
-            </div>
 
-            <div class="searchBox">
-                <input class="searchInput" type="text" id="input" placeholder="Search" required />
-                <button class="searchButton" href="#">
-                    <i class="fas fa-search" id="search"></i>
-                  </button>
-            </div>
-            <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
-            <button type="button" class="btn btn-danger" id="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sign In</button>
+  <!-- Navbar -->
+  <nav class="nav">
+    
+    <img src="net1.jpg" style="height: 450px; width: 100%;" alt="img">
+    <div class="container-fluid">
 
-        </div>
-          </nav>
+      <h1 class="navbar-brand"><strong>NetFlix</strong></h1>
+      <div class="content">
+        <b> Watch Unlimited Movies Anywhere/Anytime</b>
 
+      </div>
 
-    <div class="container" style="padding-top:20px; border: none;">
-        <div class="row" id="row" >
-        </div>
+      <div class="searchBox">
+        <input class="searchInput" type="text" id="input" placeholder="Search" required />
+        <button class="searchButton" href="#">
+          <i class="fas fa-search" id="search"></i>
+        </button>
+      </div>
+      <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+      <button type="button" class="btn btn-danger bt" id="btn" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">Sign In</button>
+
+      </div>
+    </nav>
+    
+    
+  <div class="container" style="padding-top:20px; border: none;">
+    <div class="row" id="row">
     </div>
+  </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <img class="card-img-top modal-image" src="" alt="Card image cap" style="height: 250px;">
-              <hr>
-              <h5 class="card-text modal-text-s mt-2" style="font-weight:bold;"></h5>
-              <p class="card-text modal-texts"></p>
-              <hr>           
-              <p class="card-text modal-text_s"></p>
-              <hr>
-              <p class="card-text modal-text"></p>
-              <hr>
-              <p class="card-text modal-text--s"></p>
-              <hr>
-              <p class="card-text modal-text__s"></p>
-              <hr>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="card-img-top modal-image" src="" alt="Card image cap" style="height: 250px;">
+          <hr>
+          <h5 class="card-text modal-text-s mt-2" style="font-weight:bold;"></h5>
+          <p class="card-text modal-texts"></p>
+          <hr>
+          <p class="card-text modal-text_s"></p>
+          <hr>
+          <p class="card-text modal-text"></p>
+          <hr>
+          <p class="card-text modal-text--s"></p>
+          <hr>
+          <p class="card-text modal-text__s"></p>
+          <hr>
 
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
- 
-  <div class="container mt-2">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <!-- Cards -->
+
+  <div class="container mt-1">
+    <div class="row row-cols-1 row-cols-md-3 g-5">
       <div class="col-sm-3">
         <div class="card h-100">
           <img src="movie1.jpg" style="height: 290px;" class="card-img-top" alt="Skyscrapers" />
           <div class="card-body">
-            <p class="card-text text-center">
-             Interception </p>
-          
+            <h6 class="card-text">
+              Interception </h6>
+            <p class="card-text">movie</p>
+            <button type="button" class="btn btn-primary">View More Details</button>
+
           </div>
         </div>
       </div>
@@ -224,9 +295,11 @@ body {
         <div class="card h-100">
           <img src="movie2.jpg" style="height: 290px;" class="card-img-top" alt="Los Angeles Skyscrapers" />
           <div class="card-body">
-            <p class="card-text text-center">
-                Mission Impossible
-              </p>
+            <h6 class="card-text">
+              Mission Impossible
+            </h6>
+            <p class="card-text">movie</p>
+            <button type="button" class="btn btn-primary">View More Details</button>
           </div>
         </div>
       </div>
@@ -234,9 +307,11 @@ body {
         <div class="card h-100">
           <img src="movie3.jpg" style="height: 290px;" class="card-img-top" alt="Palm Springs Road" />
           <div class="card-body">
-            <p class="card-text text-center">
-                War
-            </p>
+            <h6 class="card-text">
+              Money Heist
+            </h6>
+            <p class="card-text">movie</p>
+            <button type="button" class="btn btn-primary">View More Details</button>
           </div>
         </div>
       </div>
@@ -244,26 +319,29 @@ body {
         <div class="card h-100">
           <img src="movie4.jpg" height="290px" class="card-img-top" alt="Palm Springs Road" />
           <div class="card-body">
-            <p class="card-text text-center">
+            <h6 class="card-text ">
               Fast & Furious
-            </p>
-           
+            </h6>
+            <p class="card-text">movie</p>
+            <button type="button" class="btn btn-primary">View More Details</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-   
+
+
   <div class="container mt-2">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-5">
       <div class="col-sm-3">
         <div class="card h-100">
           <img src="movie5.jpg" style="height: 290px;" class="card-img-top" alt="Skyscrapers" />
           <div class="card-body">
-            <p class="card-text text-center">
-             Interception </p>
-          
+            <h6 class="card-text">
+              Mission Impossible 2 </h6>
+            <p class="card-text">movie</p>
+            <button type="button" class="btn btn-primary">View More Details</button>
           </div>
         </div>
       </div>
@@ -271,9 +349,11 @@ body {
         <div class="card h-100">
           <img src="movie6.jpg" style="height: 290px;" class="card-img-top" alt="Los Angeles Skyscrapers" />
           <div class="card-body">
-            <p class="card-text text-center">
-                Mission Impossible
-              </p>
+            <h6 class="card-text">
+              Road Side
+            </h6>
+            <p class="card-text">movie</p>
+            <button type="button" class="btn btn-primary">View More Details </button>
           </div>
         </div>
       </div>
@@ -281,9 +361,11 @@ body {
         <div class="card h-100">
           <img src="movie7.jpg" style="height: 290px;" class="card-img-top" alt="Palm Springs Road" />
           <div class="card-body">
-            <p class="card-text text-center">
-                War
-            </p>
+            <h6 class="card-text">
+              Avengers
+            </h6>
+            <p class="card-text">movie</p>
+            <button type="button" class="btn btn-primary">View More Details</button>
           </div>
         </div>
       </div>
@@ -291,202 +373,280 @@ body {
         <div class="card h-100">
           <img src="movie8.jpg" height="290px" class="card-img-top" alt="Palm Springs Road" />
           <div class="card-body">
-            <p class="card-text text-center">
-              Fast & Furious
-            </p>
-           
+            <h6 class="card-text">
+              Spiderman
+            </h6>
+            <p class="card-text">movie</p>
+            <button type="button" class="btn btn-primary">>View More Details</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
+ 
 
-
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" >
-        <div class="col-4" id="log" style="width: 100%; height: 100%;">
-          <div class="login-dark p-5 shadow-lg rounded">
-              <div class="pt-3">
-                  <h2 class="text-white ">Sign In | Dark</h2>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="col-4" style="width: 100%; height: 100%;">
+            <div class="login-dark p-5 shadow-lg rounded">
+              <div class="pt-0">
+                <h4 class="text-white ">Sign In</h4>
               </div>
-  
-              <form class="mt-5">
-                  <div class="form-group">
-                      <input type="email" 
-                          class="form-control form-control-sm bg-light" 
-                          placeholder="Email Id">
-                  </div>
-  
-                  <div class="form-group">
-                      <input type="password" 
-                          class="form-control form-control-sm bg-light" 
-                          placeholder="Password">
-                  </div>
-  
-                  <div class="form-group form-check">
-                      <input type="checkbox" class="form-check-input" id="rememberCheckBox">
-                      <label class="form-check-label text-light" for="rememberCheckBox">Remember me?</label>
-                  </div>
-  
-                  <div class="mt-5">
-                      <button class="btn btn-lg btn-dark col text-center">
-                          Login
-                      </button>
-                  </div>
-  
-                  <div class="text-center mt-2">
-                      <a href="#" class="text-warning">Forgot Password?</a>
-                  </div>
-                  
-                  <div class="mt-5">
-                      <p class="text-white text-center">
-                          Don't have an account?
-                          <a href="#" class="text-warning">Click here to register</a>
-                      </p>
-                  </div>
+
+              <form class="mt-3">
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-sm bg-light " placeholder="Email Id" id="email"
+                    required />
+                </div>
+
+                <div class="form-group d-flex">
+                  <input type="password" class="form-control form-control-sm bg-light mt-3" placeholder="Password"
+                    id="pass" required />
+                  <button class="button mt-3" onclick="switchVisibility()" style="border-radius: 10px;"> <i
+                      class="fa-regular fa-eye-slash"></i> </button>
+
+                </div>
+
+                <div class="form-group form-check mt-3">
+                  <input type="checkbox" class="form-check-input" id="rememberCheckBox">
+                  <label class="form-check-label text-light " for="rememberCheckBox">Remember me?</label>
+                </div>
+
+                <div class="mt-3">
+                  <button class="btn-dark col" style="left: 50%;" onclick="myfunction()">
+                    Login
+                  </button>
+                </div>
+
+                <div class="text-center mt-3">
+                  <a href="#" class="text-warning">Forgot Password?</a>
+                </div>
+
               </form>
+            </div>
           </div>
-      </div>
-  </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  </div>
 
-
-    <hr style="border: 2px solid red;">
-
-    <footer class="text-center text-white">
-        <!-- Grid container -->
-        <div class="container pt-4">
-            <!-- Section: Social media -->
-            <section class="mb-4 text-light">
-                <!-- Facebook -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
-                    data-mdb-ripple-color="dark"><i class="fab fa-whatsapp" id="icon"></i></a>
-
-                <!-- Twitter -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
-                    data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" id="icon"></i></a>
-
-                <!-- Google -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
-                    data-mdb-ripple-color="dark"><i class="fab fa-google" id="icon"></i></a>
-
-                <!-- Instagram -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
-                    data-mdb-ripple-color="dark"><i class="fab fa-instagram" id="icon"></i></a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-2 fs-3" href="#" role="button"
-                    data-mdb-ripple-color="dark"><i class="fab fa-github" id="icon"></i></a>
+  
+  <div class="container p-2 pb-0 mt-4">
+    <form action="">
+      <!--Grid row-->
+      <div class="row justify-content-center">
+        <!--Grid column-->
+        <div class="col-auto mb-4 mb-md-0">
+          <h6 class="pt-2">
+            <strong>BE THE FIRST TO KNOW SIGN UP</strong>
+          </h6>
         </div>
-        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.947);">
-            © 2023 Copyright:
-            <a class="text-white" href="">NetFlix.com</a>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-5 col-12 mb-4 mb-md-0">
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="form5Example25" class="form-control" placeholder="Email Address" required/>
+
+          </div>
         </div>
-    </footer>
+        <!--Grid column-->
 
+        <!--Grid column-->
+        <div class="col-auto mb-4 mb-md-0">
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-danger mb-4 subscribe">
+            Subscribe
+          </button>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </form>
+  </div>
 
-    <script>
-        $("#input").on('keydown', function (e) {
-            if (e.keyCode == 13) {
-                $("#search").click();
-            }
-        })
-        $("#search").click(function () {
-            $("#row").html('');
-            input = $("#input").val();
-            const url = `http://www.omdbapi.com/?s=${input}&apikey=704c6ce7`;
-            $.ajax({
-                url: url,
-                type: "GET",
-                dataType: "JSON",
-                success: function (accept) {
-                    for (i of accept.Search) {
-                        $("#row").append(
-                      `<div class="card mb-3" style="max-width: 500px; margin-left:10px;">
-                        <div class="row g-0">
-                          <div class="col-md-4">
-                            <img src="${i.Poster}" class="img-fluid rounded-start" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title" style="font-weight:bold;">${i.Title}</h5>
-                              <p class="card-text">${i.Type}</p>
-                              <p class="card-text"><small class="text-dark">${i.Year}</small></p>
-                              <button data-bs-toggle="modal" id='${i.imdbID}' data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary btn-md">View More</button>                        
-                            </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>`
-                   
-                         )
-                        }
-                    },
-                    error: function (accept) {
-                        console.log(accept)
-                    }
-                })
-                
-                
-        })
+  <hr style="border: 2px solid red;">
 
-
-        function detail(e){
-            console.log(e.id);
-            const url = `http://www.omdbapi.com/?i=${e.id}&apikey=704c6ce7`;
-            $.ajax({
-                url: url,
-                type: "GET",
-                dataType: "JSON",
-                success: function (accept) {
-                    $(".modal-image").attr('src',accept.Poster);
-                    $(".modal-title").text(accept.Title);
-                    $(".modal-text").text(accept.Plot);
-                    $(".modal-texts").text(accept.Awards);
-                    $(".modal-text--s").text(accept.Released); 
-                    $(".modal-text-s").text(accept.Writer);
-                    $(".modal-text_s").text(accept.Actors);
-                    $(".modal-text__s").text(accept.BoxOffice);
-
-
-                },
-                error: function (accept) {
-                    console.log(accept)
-                }
-            })
-        }
-
+  <!-- Footer -->
+  <footer class="bg- text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-5">
+      
+  
+        <!-- whatsapp -->
+        <a
+          class="btn text-white btn-floating m-2"
+          style="background-color: darkgreen;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+    <!-- Facebook -->
+        <a
+          class="btn text-white btn-floating m-2"
+          style="background-color: #3b5998;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <!-- Google -->
+        <a
+          class="btn text-white btn-floating m-2"
+          style="background-color: #dd4b39;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn text-white btn-floating m-2"
+          style="background-color: #ac2bac;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
        
-        const toggle = document.getElementById('toggleDark');
-        const body = document.querySelector('body');
+        <!-- Github -->
+        <a
+          class="btn text-white btn-floating m-2"
+          style="background-color: #333333;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+      © 2020 Copyright:
+      <a class="text-white" href="index.html">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
-        toggle.addEventListener('click', function () {
-            this.classList.toggle('bi-moon');
-            if (this.classList.toggle('bi-brightness-high-fill')) {
-                body.style.background = 'white';
-                body.style.color = 'red';
-                body.style.transition = '0.5s';
-            } else {
-                body.style.background = 'black';
-                body.style.color = 'white';
-                body.style.transition = '0.5s';
-            }
-        });
-    </script>
+
+
+
+
+  <script>
+    $("#input").on('keydown', function (e) {
+      if (e.keyCode == 13) {
+        $("#search").click();
+      }
+    })
+    $("#search").click(function () {
+      $("#row").html('');
+      input = $("#input").val();
+      const url = `http://www.omdbapi.com/?s=${input}&apikey=704c6ce7`;
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "JSON",
+        success: function (accept) {
+          for (i of accept.Search) {
+            $("#row").append(
+              `<div class="card" style="width: 250px ; margin-left:20px; height:450px; margin-bottom:20px;">
+                     <img class="card-img-top" src="${i.Poster}" alt="Card image cap" style="height:250px; ">
+                     <div class="card-body">
+                         <h6 class="card-title">${i.Title}</h6>
+                         <p class="card-text">${i.Type}</p>
+                         <button data-bs-toggle="modal" id='${i.imdbID}' data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary">View More details</button>
+                        
+                         </div>
+                         </div>`
+         
+            )
+          }
+        },
+        error: function (accept) {
+          console.log(accept)
+        }
+      })
+
+
+    })
+
+
+    function detail(e) {
+      console.log(e.id);
+      const url = `http://www.omdbapi.com/?i=${e.id}&apikey=704c6ce7`;
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "JSON",
+        success: function (accept) {
+          $(".modal-image").attr('src', accept.Poster);
+          $(".modal-title").text(accept.Title);
+          $(".modal-text").text(accept.Plot);
+          $(".modal-texts").text(accept.Awards);
+          $(".modal-text--s").text(accept.Released);
+          $(".modal-text-s").text(accept.Writer);
+          $(".modal-text_s").text(accept.Actors);
+          $(".modal-text__s").text(accept.BoxOffice);
+
+
+        },
+        error: function (accept) {
+          console.log(accept)
+        }
+      })
+    }
+
+
+    const toggle = document.getElementById('toggleDark');
+    const body = document.querySelector('body');
+
+    toggle.addEventListener('click', function () {
+      this.classList.toggle('bi-moon');
+      if (this.classList.toggle('bi-brightness-high-fill')) {
+        body.style.background = 'white';
+        body.style.color = 'red';
+        body.style.transition = '0.5s';
+      } else {
+        body.style.background = 'black';
+        body.style.color = 'white';
+        body.style.transition = '0.5s';
+      }
+    });
+
+    const passwordfield = document.querySelector("#pass");
+
+    function switchVisibility() {
+      if (passwordfield.getAttribute("type") === "password")
+        passwordfield.setAttribute("type", "text");
+
+      else passwordfield.setAttribute("type", "password");
+
+    }
+
+
+    function myfunction() {
+
+      var uemail = document.getElementById("email").value;
+      localStorage.setItem("Email", uemail)
+
+      var upass = document.getElementById("pass").value;
+      localStorage.setItem("Password", upass)
+    }
+  </script>
 </body>
 
 </html>
