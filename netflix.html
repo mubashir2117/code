@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+     
+
+body {
+    margin: 0;
+    padding-top: 100px;
+    background: black;
+}
+
+.netflix {
+    width: 140px;
+    height: 250px;
+    position: relative;
+    margin-left: 45%;
+    background: linear-gradient(90deg, #b1060e 0, #b1060e 50px, transparent 50px, transparent 90px, #b1060e 90px, #b1060e 140px);
+    
+    animation: animate 0.8s ease-in-out ;
+
+    /* animation-name: animate;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: initial;
+    animation-direction: normal; */
+    /* transform: translate(-50%); */
+    /* transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s; */
+    /* transition: transform 0.3s ease-in-out; */
+
+}
+/* .netflix:hover{
+transform: translateY(20px );
+
+} */
+
+@keyframes animate {
+    from{
+        transform: translateX(-250px)
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.netflix::before,
+.netflix::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+.netflix::before {
+    width: 50px;
+    height: 250px;
+    top: 0;
+    left: 45px;
+    background: #e50914;
+    transform: skewX(19.6deg);
+    box-shadow: 0 0 30px #000;
+}
+.netflix::after {
+    width: 190px;
+    height: 25px;
+    top: 245px;
+    left: -25px;
+    border-radius: 50%;
+    background: #000;
+}
+.btn{
+    margin-top: 50px;
+    margin-left: 45%;
+    padding: 15px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: white;
+    color: red;
+    
+}
+.btn:hover{
+    background-color: red;
+    color: white;
+box-shadow: 7px 8px 50px red;
+}
+
+
+    </style>
+    <body>
+        
+        <div class="netflix"></div>
+        <a href="index.html"><button class="btn">Explore Now</button></a>
+        
+    </body>
+</html>
