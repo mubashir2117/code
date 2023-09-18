@@ -128,7 +128,7 @@
     cursor: pointer;
     float: right;
     z-index: 1;
-    left: 92%;
+    left: 90%;
     top: 5%;
     position: absolute;
     border: none;
@@ -139,7 +139,7 @@
     cursor: pointer;
     float: right;
     z-index: 1;
-    left: 84%;
+    left: 82%;
     top: 5%;
     position: absolute;
     border: none;
@@ -193,13 +193,158 @@
     background-color: black;
     color: white;
   }
-.subscribe:hover{background-color: black;
-  color: white;
 
-}
+
+  #image {
+    height: 290px;
+  }
+
+  .head {
+    width: 100%;
+    height: 500px;
+    position: relative;
+  }
+
+  .color {
+    width: 100%;
+    height: 550px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+  }
+
+  img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    display: block;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .net {
+    width: 200px;
+    cursor: pointer;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 25px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+  }
+
+  .features {
+    padding: 10px 5%;
+    font-size: 22px;
+    color: white;
+    background-color: #000;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+  }
+
+  .text-col {
+    flex-basis: 40%;
+    margin-bottom: 10px;
+  }
+
+  .img-col {
+    flex-basis: 60%;
+    margin-bottom: 10px;
+  }
+
+  .img-col img {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+  }
+
+  .features h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .faq h2 {
+    font-weight: 600;
+    font-size: 25px;
+  }
+
+  .accord {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .accord li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .accord li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 3px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  label::after {
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .accord .cont {
+    background: #303030;
+    text-align: left;
+    overflow: hidden;
+    padding: 0 20px;
+    max-height: 0;
+    transition: max-height 0.5s, padding 0.5s;
+  }
+
+  .accord  input[type="radio"]:checked + label + .cont{
+    max-height: 600px;
+    padding: 30px 20px;
+  }
+  .accord  input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+  }
  
-  
-</style>
+
+ </style>
+ 
 
 <body>
 
@@ -207,7 +352,7 @@
   <nav class="nav">
     <div class="head">
       <div class="color"></div>
-      <img src="net1.jpg" alt="">
+      <img src="net1.jpg"  alt="">
     </div>
     <div class="">
 
@@ -439,13 +584,14 @@
   </div>
 
 
+
   <div data-aos="zoom-in-up">
   <div class="features">
     <div class="row">
       <div class="text-col">
         <h2>Enjoy on your TV.</h2>
         <p>Watch on smart TVs, Playstation, Xbox, Chromecast, AppleTV, Blu-ray players and more</p>
-      </div>
+        </div>
       <div class="img-col">
         <img src="feature-1.png" alt="">
       </div>
@@ -528,14 +674,14 @@
             velit quisquam reprehenderit obcaecati eum fugit cupiditate. Dicta, rem. Corporis ab sint, odio debitis
             accusantium praesentium sed deserunt porro in ea aperiam, incidunt dolorum fugiat esse!</p>
         </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-auto mb-4 mb-md-0">
-          <!-- Submit button -->
-          <button type="submit" class="btn btn-danger mb-4 subscribe">
-            Subscribe
-          </button>
+      </li>
+      <li>
+        <input type="radio" name="accord" id="Fourth">
+        <label for="Fourth">How do I cancel?</label>
+        <div class="cont">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium corporis earum. Deleniti natus
+            velit quisquam reprehenderit obcaecati eum fugit cupiditate. Dicta, rem. Corporis ab sint, odio debitis
+            accusantium praesentium sed deserunt porro in ea aperiam, incidunt dolorum fugiat esse!</p>
         </div>
       </li>
       <li>
@@ -557,7 +703,7 @@
   <!-- Footer -->
   <footer class="bg- text-center text-white">
     <!-- Grid container -->
-    <div class="container p-2 pb-0">
+    <div class="container p-2 pb-2">
       <!-- Section: Social media -->
       <section class="mb-3 ">
 
@@ -585,10 +731,12 @@
     </div>
     <!-- Grid container -->
 
+    <hr style="border: 2px solid red;">
+
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgb(0, 0, 0);">
+    <div class="text-center p-1 pb-1" style="background-color: rgb(0, 0, 0); font-size: 16px;">
       © 2023 Copyright:
-      <a class="text-white" href="index.html">Netflix.com</a>
+      <a class="text-white" href="index.html" style="font-size: 16px;">Netflix.com</a>
     </div>
     <!-- Copyright -->
   </footer>
@@ -614,18 +762,17 @@
         dataType: "JSON",
         success: function (accept) {
           for (i of accept.Search) {
-            $("#row").append(
-              `<div class="card" style="width: 250px ; margin-left:20px; height:450px; margin-bottom:20px;">
-                     <img class="card-img-top" src="${i.Poster}" alt="Card image cap" style="height:250px; ">
-                     <div class="card-body">
-                         <h6 class="card-title">${i.Title}</h6>
-                         <p class="card-text">${i.Type}</p>
-                         <button data-bs-toggle="modal" id='${i.imdbID}' data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary">View More details</button>
-                        
-                        
-                         </div>
-                         </div>`
 
+            $("#row").append(
+            
+                `<div class="card bg-black text-white" style="width: 250px ; margin-left:8px; height:450px; margin-bottom:12px; margin-top:30px; padding-left:0px; border: 2px solid white;">
+                  <img class="card-img-top" src="${i.Poster}" alt="Card image cap" style="height:300px; width:240px; ">
+                  <div class="card-body">
+                    <h5 class="card-title">${i.Title}</h5>
+                   <p class="card-text">${i.Type}</p>
+                    <button data-bs-toggle="modal" id='${i.imdbID}' data-bs-target="#exampleModal" onclick="detail(this)" class="btn btn-primary">View More details</button>
+  </div>
+</div>`
             )
           }
         },
@@ -655,19 +802,13 @@
           $(".modal-text_s").text(accept.Actors);
           $(".modal-text__s").text(accept.BoxOffice);
 
-
         },
         error: function (accept) {
           console.log(accept)
       console.log(accept)
         }
       })
-    }
-
-
-
-
-    
+    }  
 
     function myfunction() {
 
