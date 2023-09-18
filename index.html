@@ -35,24 +35,7 @@
 
   }
 
-  #toggleDark {
-    font-size: 25px;
-    cursor: pointer;
-    transform: translate(-20%, -50%);
-    float: right;
-    z-index: 1;
-    color: white;
-    left: 95%;
-    top: 8%;
-    position: absolute;
-  }
-
-  #toggleDark:hover::before {
-    color: black;
-  }
-
-
-  #icon {
+   #icon {
     color: red;
     background-color: transparent;
   }
@@ -182,6 +165,7 @@
   .bt {
     background-color: red;
     color: white;
+    left: 90%;
   }
 
   .bt:hover {
@@ -209,157 +193,13 @@
     background-color: black;
     color: white;
   }
+.subscribe:hover{background-color: black;
+  color: white;
 
-
-  #image {
-    height: 290px;
-  }
-
-  .head {
-    width: 100%;
-    height: 500px;
-    position: relative;
-  }
-
-  .color {
-    width: 100%;
-    height: 550px;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.6;
-  }
-
-  img {
-    width: 100%;
-    height: 550px;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    display: block;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .net {
-    width: 200px;
-    cursor: pointer;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    margin-top: 20px;
-    margin-left: 25px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-
-  }
-
-  .features {
-    padding: 10px 8%;
-    font-size: 22px;
-    color: white;
-    background-color: #000;
-  }
-
-  .row {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 30px 0;
-  }
-
-  .text-col {
-    flex-basis: 40%;
-    margin-bottom: 10px;
-  }
-
-  .img-col {
-    flex-basis: 60%;
-    margin-bottom: 10px;
-  }
-
-  .img-col img {
-    display: block;
-    width: 100%;
-    height: 50%;
-    margin: auto;
-  }
-
-  .features h2 {
-    font-size: 35px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-
-  .faq {
-    padding: 10px 12%;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .faq h2 {
-    font-weight: 600;
-    font-size: 25px;
-  }
-
-  .accord {
-    margin: 60px auto;
-    width: 100%;
-    max-width: 750px;
-  }
-
-  .accord li {
-    list-style: none;
-    width: 100%;
-    padding: 5px;
-  }
-
-  .accord li label {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    background: #303030;
-    margin-bottom: 3px;
-    cursor: pointer;
-    position: relative;
-  }
-
-  label::after {
-    content: "+";
-    font-size: 34px;
-    position: absolute;
-    right: 20px;
-    transition: transform 0.5s;
-  }
-
-  input[type="radio"] {
-    display: none;
-  }
-
-  .accord .cont {
-    background: #303030;
-    text-align: left;
-    overflow: hidden;
-    padding: 0 20px;
-    max-height: 0;
-    transition: max-height 0.5s, padding 0.5s;
-  }
-
-  .accord  input[type="radio"]:checked + label + .cont{
-    max-height: 600px;
-    padding: 30px 20px;
-  }
-  .accord  input[type="radio"]:checked + label::after{
-    transform: rotate(135deg);
-  }
+}
  
-
- </style>
+  
+</style>
 
 <body>
 
@@ -688,14 +528,14 @@
             velit quisquam reprehenderit obcaecati eum fugit cupiditate. Dicta, rem. Corporis ab sint, odio debitis
             accusantium praesentium sed deserunt porro in ea aperiam, incidunt dolorum fugiat esse!</p>
         </div>
-      </li>
-      <li>
-        <input type="radio" name="accord" id="Fourth">
-        <label for="Fourth">How do I cancel?</label>
-        <div class="cont">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium corporis earum. Deleniti natus
-            velit quisquam reprehenderit obcaecati eum fugit cupiditate. Dicta, rem. Corporis ab sint, odio debitis
-            accusantium praesentium sed deserunt porro in ea aperiam, incidunt dolorum fugiat esse!</p>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-auto mb-4 mb-md-0">
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-danger mb-4 subscribe">
+            Subscribe
+          </button>
         </div>
       </li>
       <li>
@@ -775,9 +615,8 @@
         success: function (accept) {
           for (i of accept.Search) {
             $("#row").append(
-              `
-              <div class="card bg-black text-white" style="width: 250px ; margin-left:8px; height:450px; margin-bottom:12px; margin-top:30px; padding-left:0px; border: 2px solid white;  ">
-                     <img class="card-img-top" src="${i.Poster}" alt="Card image cap" style="height:300px; width:240px; ">
+              `<div class="card" style="width: 250px ; margin-left:20px; height:450px; margin-bottom:20px;">
+                     <img class="card-img-top" src="${i.Poster}" alt="Card image cap" style="height:250px; ">
                      <div class="card-body">
                          <h6 class="card-title">${i.Title}</h6>
                          <p class="card-text">${i.Type}</p>
@@ -828,16 +667,7 @@
 
 
 
-    const passwordfield = document.querySelector("#pass");
-
-    function switchVisibility() {
-      if (passwordfield.getAttribute("type") === "password")
-        passwordfield.setAttribute("type", "text");
-
-      else passwordfield.setAttribute("type", "password");
-
-    }
-
+    
 
     function myfunction() {
 
