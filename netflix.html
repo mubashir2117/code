@@ -10,7 +10,7 @@
 
 body {
     margin: 0;
-    padding-top: 100px;
+    padding-top: 10px;
     background: black;
 }
 
@@ -18,7 +18,7 @@ body {
     width: 140px;
     height: 250px;
     position: relative;
-    margin-left: 45%;
+    margin-left: 5%;
     background: linear-gradient(90deg, #b1060e 0, #b1060e 50px, transparent 50px, transparent 90px, #b1060e 90px, #b1060e 140px);
     
     animation: animate 0.8s ease-in-out ;
@@ -44,10 +44,10 @@ transform: translateY(20px );
 
 @keyframes animate {
     from{
-        transform: translateX(-250px)
+        transform: scale(300px)
     }
     to{
-        transform: translateX(0);
+        transform: scale(0);
     }
 }
 .netflix::before,
@@ -73,9 +73,10 @@ transform: translateY(20px );
     border-radius: 50%;
     background: #000;
 }
-.btn{
+.button{
     margin-top: 50px;
-    margin-left: 45%;
+    margin-left: 40%;
+    margin-right: 0;
     padding: 15px;
     border: none;
     font-size: 20px;
@@ -86,7 +87,7 @@ transform: translateY(20px );
     color: red;
     
 }
-.btn:hover{
+.button:hover{
     background-color: red;
     color: white;
 box-shadow: 7px 8px 50px red;
@@ -97,7 +98,7 @@ box-shadow: 7px 8px 50px red;
     <body>
         
         <div class="netflix"></div>
-        <a href="index.html"><button class="btn">Explore Now</button></a>
+        <a href="index.html"><button class="button">Explore</button></a>
         
     </body>
 </html>
